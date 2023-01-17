@@ -7,6 +7,9 @@
   --main-color: #4b8ef1;
   --main-font: "Roboto", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: var(--main-font);
 }
