@@ -52,10 +52,10 @@ window.onscroll = function () {
   }
 };
 
-// // Force Page To Load On X 0 (It's On Before Unload)
-// window.onbeforeunload = function () {
-//   window.scrollTo(0, 0);
-// };
+// Force Page To Load On X 0 (It's On Before Unload)
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
 
 // Change State
 let client = document.querySelectorAll(".click");
