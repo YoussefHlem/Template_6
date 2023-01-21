@@ -70,27 +70,52 @@ client.forEach((e) => {
     document.getElementById("changeH4").innerHTML = document.querySelector(
       ".client .rates .rate.active .box h4"
     ).textContent;
-    if (
-      document.getElementById("changeH4").textContent === "David Martino Co"
-    ) {
-      document.getElementById("changeP").innerHTML = "CEO of David Company";
-    } else if (
-      document.getElementById("changeH4").textContent === "Jake Harris Nyo"
-    ) {
-      document.getElementById("changeP").innerHTML = "CTO of Digital Company";
-    } else if (
-      document.getElementById("changeH4").textContent === "May Catherina"
-    ) {
-      document.getElementById("changeP").innerHTML = "Founder of Catherina Co.";
-    } else if (
-      document.getElementById("changeH4").textContent === "Random User"
-    ) {
-      document.getElementById("changeP").innerHTML = "Manager, Digital Company";
-    } else if (
-      document.getElementById("changeH4").textContent === "Mark Amber Do"
-    ) {
-      document.getElementById("changeP").innerHTML = "CTO, Amber Do Company";
+    // Old Solution ================================================================================================
+
+    // if (
+    //   document.getElementById("changeH4").textContent === "David Martino Co"
+    // ) {
+    //   document.getElementById("changeP").innerHTML = "CEO of David Company";
+    // } else if (
+    //   document.getElementById("changeH4").textContent === "Jake Harris Nyo"
+    // ) {
+    //   document.getElementById("changeP").innerHTML = "CTO of Digital Company";
+    // } else if (
+    //   document.getElementById("changeH4").textContent === "May Catherina"
+    // ) {
+    //   document.getElementById("changeP").innerHTML = "Founder of Catherina Co.";
+    // } else if (
+    //   document.getElementById("changeH4").textContent === "Random User"
+    // ) {
+    //   document.getElementById("changeP").innerHTML = "Manager, Digital Company";
+    // } else if (
+    //   document.getElementById("changeH4").textContent === "Mark Amber Do"
+    // ) {
+    //   document.getElementById("changeP").innerHTML = "CTO, Amber Do Company";
+    // }
+
+    // Old Solution ================================================================================================
+
+    let changeState = document.getElementById("changeH4").innerHTML
+    let changeState2 = document.getElementById("changeP").innerHTML
+    switch(changeState){
+      case "David Martino Co":
+        changeState2 = "CEO of David Company"
+        break;
+      case "Jake Harris Nyo":
+        changeState2 = "CTO of Digital Company"
+        break;
+      case "May Catherina":
+        changeState2 = "Founder of Catherina Co."
+        break;
+      case "Random User":
+        changeState2 = "Manager, Digital Company"
+        break;
+      case "Mark Amber Do":
+        changeState2 = "CTO, Amber Do Company"
+        break;
     }
+
     document.querySelector(".client .opinion").classList.add("change-state");
     setTimeout(() => {
       document
