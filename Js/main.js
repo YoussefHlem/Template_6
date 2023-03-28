@@ -34,6 +34,7 @@ document.addEventListener("click", (e) => {
     }
   }
 });
+
 // Stop Propagation On Menu
 links.onclick = function (e) {
   e.stopPropagation();
@@ -50,11 +51,6 @@ window.onscroll = function () {
   if (window.scrollY <= heading.scrollHeight) {
     document.querySelector("nav").classList.remove("active");
   }
-};
-
-// Force Page To Load On X 0 (It's On Before Unload)
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
 };
 
 // Change State
@@ -96,23 +92,23 @@ client.forEach((e) => {
 
     // Old Solution ================================================================================================
 
-    let changeState = document.getElementById("changeH4").innerHTML
-    let changeState2 = document.getElementById("changeP").innerHTML
-    switch(changeState){
+    let changeState = document.getElementById("changeH4").innerHTML;
+    let changeState2 = document.getElementById("changeP").innerHTML;
+    switch (changeState) {
       case "David Martino Co":
-        changeState2 = "CEO of David Company"
+        changeState2 = "CEO of David Company";
         break;
       case "Jake Harris Nyo":
-        changeState2 = "CTO of Digital Company"
+        changeState2 = "CTO of Digital Company";
         break;
       case "May Catherina":
-        changeState2 = "Founder of Catherina Co."
+        changeState2 = "Founder of Catherina Co.";
         break;
       case "Random User":
-        changeState2 = "Manager, Digital Company"
+        changeState2 = "Manager, Digital Company";
         break;
       case "Mark Amber Do":
-        changeState2 = "CTO, Amber Do Company"
+        changeState2 = "CTO, Amber Do Company";
         break;
     }
 
